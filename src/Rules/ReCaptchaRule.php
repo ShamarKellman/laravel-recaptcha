@@ -22,7 +22,7 @@ class ReCaptchaRule implements Rule
             ->setScoreThreshold(config('recaptcha.score_threshold', 0.5))
             ->verify($value, optional(request())->ip());
 
-        if (!$resp->isSuccess()) {
+        if (! $resp->isSuccess()) {
             $this->errorMessage = 'ReCaptcha field is required.';
 
             return false;

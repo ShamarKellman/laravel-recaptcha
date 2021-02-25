@@ -27,7 +27,7 @@ class LaravelRecaptchaServiceProvider extends PackageServiceProvider
             return '<input type="hidden" name="recaptcha_token" id="recaptcha_token">';
         });
 
-        Blade::directive('recaptchaScripts',  static function() {
+        Blade::directive('recaptchaScripts',  static function () {
             return <<<EOT
 <script src="https://www.google.com/recaptcha/api.js?render={{ config('recaptcha.public_key') }}"></script>
 <script>
@@ -39,7 +39,7 @@ grecaptcha.ready(function() {
 EOT;
         });
 
-        Blade::directive('recaptchaBranding', static function() {
+        Blade::directive('recaptchaBranding', static function () {
             return <<<html
 This site is protected by ReCaptcha and the Google
 <a href=”https://policies.google.com/privacy">Privacy Policy</a> and
