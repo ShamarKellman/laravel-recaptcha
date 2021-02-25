@@ -1,0 +1,57 @@
+{
+    "name": "shamarkellman/laravel-recaptcha",
+    "description": "laravel-recaptcha",
+    "keywords": [
+        "shamarkellman",
+        "laravel-recaptcha"
+    ],
+    "homepage": "https://github.com/shamarkellman/laravel-recaptcha",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shamar Kellman",
+            "email": "shamarkellman@hotmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "google/recaptcha": "^1.2",
+        "illuminate/contracts": "^8.0",
+        "spatie/laravel-package-tools": "^1.1"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "ShamarKellman\\LaravelRecaptcha\\": "src",
+            "ShamarKellman\\LaravelRecaptcha\\Database\\Factories\\": "database/factories"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ShamarKellman\\LaravelRecaptcha\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --colors=always",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ShamarKellman\\LaravelRecaptcha\\LaravelRecaptchaServiceProvider"
+            ],
+            "aliases": {
+                "LaravelRecaptcha": "LaravelRecaptcha"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
