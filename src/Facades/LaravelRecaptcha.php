@@ -1,6 +1,6 @@
 <?php
 
-namespace ShamarKellman\LaravelRecaptcha;
+namespace ShamarKellman\Facades\LaravelRecaptcha;
 
 use Illuminate\Support\Facades\Facade;
 
